@@ -7,6 +7,12 @@ import os
 import tqdm
 import matplotlib.pyplot as plt
 
+FOLDER = 'wiki_crop_all/'
+mp_face_mesh = mediapipe.solutions.face_mesh
+face_mesh = mp_face_mesh.FaceMesh(static_image_mode=True)
+
+differences = pd.read_csv('merged_faces_filtered_by_size.csv').iloc[:9000]
+
 for index, row in tqdm.tqdm(differences.iterrows(), total=differences.shape[0]):
     img = cv2.imread(FOLDER + row['img_id'])
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)

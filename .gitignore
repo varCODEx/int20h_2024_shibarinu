@@ -162,3 +162,5 @@ cython_debug/
 /wiki_crop_all/
 /cut_faces/
 /norm_cut_faces/
+/color_norm_cut_faces/
+*.zip
