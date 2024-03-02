@@ -13,5 +13,3 @@ for pic in tqdm(pics):
     sizes.append(x)
 
 print(pd.DataFrame(sizes).describe())
-
-
