@@ -30,4 +30,4 @@ for image in tqdm(image_files, unit='image', desc='Processing images...'):
 
 # Save result
 detected_faces_df = pd.DataFrame(detected_faces)
-detected_faces.to_csv('detected_faces.csv', index=False)
+detected_faces_df.to_csv('/kaggle/workin/detected_faces.csv', index=False)
