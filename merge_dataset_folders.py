@@ -18,5 +18,5 @@ for folder in tqdm(folders, unit='folder', desc='Copying folders content to dest
 
     shutil.copytree(folder, dest, dirs_exist_ok=True)
 
-assert len(files) == len(files)
+assert len(glob(str(df / '*/*'))) == len(glob(str(dest / '*')))
 ## 62328

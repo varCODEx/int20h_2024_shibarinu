@@ -160,3 +160,5 @@ cython_debug/
 #.idea/
 /wiki_crop/
 /wiki_crop_all/
+/cut_faces/
+/norm_cut_faces/
