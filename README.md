@@ -21,7 +21,7 @@ The main results are in .ipynb files (see clusterization, images with bounding b
 1. **Preprocessing**
 - Classical traditional face detection - filtering out occlusions and small faces
 - Mediapipe detection of face landmarks - face orientation
-- Sorting images by best orientation and using first 9000
+- Sorting images by best orientation, cleaning duplicates and using first 9000
 - Cutting out face by landpoints contour
 - Grayscale, histogram equalization - to balance skin color
 - Square padding and resize to 100x100
