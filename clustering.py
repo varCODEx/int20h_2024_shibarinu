@@ -5,6 +5,16 @@ import numpy as np
 from tqdm import tqdm
 import os
 
+# Extract magnitudes and flatten the arrays
+data = []
+for ft_array in tqdm(masked_ft_df['ft'], unit='tf', desc='Processing tf...'):
+    magnitudes = np.abs(ft_array)
+    flattened_array = magnitudes.flatten()
+    data.append(flattened_array)
+
+# Convert the list of arrays into a 2D feature matrix
+feature_matrix = np.array(data)
+
 kmeans = KMeans(n_clusters=7)  # Choose the number of clusters as needed
 kmeans.fit(feature_matrix)
 
